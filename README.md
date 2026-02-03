@@ -1,7 +1,19 @@
-## Objetivo do projeto :
-  Rodar testes automatizados para os cenários de um fluxo de compras dentro de um E-commerce público. 
+## 🚀 Objetivo do projeto :
+  Rodar testes automatizados para os cenários mais estáveis de um fluxo de compras dentro de um E-commerce público. 
 
-## 🛠️ Como Executar o Projeto
+## 🛠️ Tecnologias e Ferramentas
+
+| Tecnologia | Descrição | Ícone | Documentação |
+| :--- | :--- | :---: | :--- |
+| **Playwright** | Framework de automação E2E para UI e API. | 🎭 | [Acessar Doc](https://playwright.dev/) |
+| **TypeScript** | Linguagem principal para tipagem e segurança. | 📘 | [Acessar Doc](https://www.typescriptlang.org/) |
+| **Node.js** | Ambiente de execução do projeto. | 🟢 | [Acessar Doc](https://nodejs.org/) |
+| **GitHub Actions** | Orquestração de CI/CD e execução em nuvem. | 🚀 | [Acessar Doc](https://github.com/features/actions) |
+
+
+
+
+## Como Executar o Projeto
 
 ### 1. Pré-requisitos
 Certifique-se de ter o [Node.js](https://nodejs.org/) instalado em sua máquina (recomendo versão 18 ou superior).
@@ -25,11 +37,26 @@ npx playwright install
 ```bash
 npx playwright test
 ```
-#### 4.1. Modo UI(Interface Visual):
+4.1. Modo UI(Interface Visual):
 ```bash
 npx playwright test --ui
 ```
 
-### 5. Estrutura do Projeto:
+### 🧪5. Cenários Automatizados(E2E):  
+Abordamos cenários que cobrem o Core Business (coração do negócio) do E-commerce SauceDemo
 
-### 6. Cenários Automatizados(E2E): 
+    1. Fluxo de Compra Feliz (Happy Path)
+    2. Validação de Regras de Negócio e Cálculos
+    3. Gestão de Estado do Carrinho
+    4. Testes de Resiliência (Cenários de Erro)
+
+
+
+### 📝 Resumo da Entrega Final
+
+Este projeto entrega um **framework de automação E2E robusto e escalável**, desenvolvido com foco em qualidade de software e manutenibilidade. A solução vai além de simples scripts, aplicando conceitos fundamentais de engenharia:
+
+* **Arquitetura Multicamadas**: Implementação rigorosa do padrão **Page Object Model (POM)**, garantindo a separação entre a lógica de teste e a interação com elementos da interface.
+* **Programação Orientada a Objetos (POO)**: Utilização de classes e métodos para encapsular comportamentos, facilitando a reutilização de código e a legibilidade dos cenários.
+* **Isolamento e Independência**: Testes desenhados para serem independentes, com setups e cleanups que garantem a confiabilidade da execução (evitando estados compartilhados).
+* **Qualidade Contínua (CI/CD)**: Pipeline totalmente integrada via GitHub Actions, validando o projeto em múltiplos motores de renderização (Chromium e Firefox) a cada nova alteração.
