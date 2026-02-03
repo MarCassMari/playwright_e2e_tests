@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { LoginPage } from '../../pages/LoginPage';
-// Importando a massa de dados
+
 import usuarios from '../../data/users.json';
 
 test.describe('Cenários de Login - Swag Labs', () => {
@@ -11,7 +11,6 @@ test.describe('Cenários de Login - Swag Labs', () => {
     await loginPage.acessarPagina();
   });
 
-  // Loop usando os dados do JSON
   for (const usuario of usuarios.valid_users) {
     test(`Deve realizar login com sucesso para o perfil: ${usuario}`, async ({ page }) => {
       await loginPage.realizarLogin(usuario, usuarios.default_password);

@@ -1,6 +1,6 @@
 import { Page, Locator } from '@playwright/test';
 
-export class InventoryPage {
+export class ItensPage {
   readonly page: Page;
   readonly backpackAddToCartBtn: Locator;
   readonly cartBadge: Locator;
@@ -22,6 +22,5 @@ export class InventoryPage {
     await this.backpackAddToCartBtn.click();
     await this.bikeLightAddToCartBtn.click();
     await this.boltTshirtAddToCartBtn.click();
-    await this.cartLink.click();
   }
 }

@@ -1,19 +1,19 @@
 import { Page } from '@playwright/test';
-import { InventoryPage } from '../pages/ItensPage';
+import { ItensPage } from '../pages/ItensPage';
 
 export class CartFlows {
   readonly page: Page;
-  readonly inventoryPage: InventoryPage;
+  readonly ItensPage: ItensPage;
 
   constructor(page: Page) {
     this.page = page;
-    this.inventoryPage = new InventoryPage(page);
+    this.ItensPage = new ItensPage(page);
   }
 
   async adicionarKitBasicoAoCarrinho() {
-    await this.inventoryPage.backpackAddToCartBtn.click();
-    await this.inventoryPage.bikeLightAddToCartBtn.click();
-    await this.inventoryPage.boltTshirtAddToCartBtn.click();
-    await this.inventoryPage.cartLink.click();
+    await this.ItensPage.backpackAddToCartBtn.click();
+    await this.ItensPage.bikeLightAddToCartBtn.click();
+    await this.ItensPage.boltTshirtAddToCartBtn.click();
+    await this.ItensPage.cartLink.click();
   }
 }
