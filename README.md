@@ -76,4 +76,4 @@ Este projeto entrega um **framework de automação E2E robusto e escalável**, d
 * **Programação Orientada a Objetos (POO)**: Utilização de classes e métodos para encapsular comportamentos, facilitando a reutilização de código e a legibilidade dos cenários.
 * **Isolamento e Independência**: Testes desenhados para serem independentes, com setups e cleanups que garantem a confiabilidade da execução (evitando estados compartilhados).
 * **Qualidade Contínua (CI/CD)**: Pipeline totalmente integrada via GitHub Actions, validando o projeto em múltiplos motores de renderização (Chromium e Firefox) a cada nova alteração.
-* **Testes de API com Validação de Contrato**: Além da UI, o projeto integra validações de camada de serviço utilizando **Zod**, garantindo que a comunicação com o backend siga rigorosamente os schemas definidos.
+* **Testes de API com Validação de Contrato**: Além da UI, o projeto integra validações de camada de serviço utilizando **Zod**, garantindo que a comunicação com o backend siga rigorosamente os schemas e status definidos.
