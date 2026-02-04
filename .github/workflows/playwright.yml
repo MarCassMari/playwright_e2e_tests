@@ -26,10 +26,9 @@ jobs:
       run: npx playwright install --with-deps
 
     - name: Run Playwright tests
-    env:
+      env:
         GOREST_BASE_URL: ${{ secrets.GOREST_BASE_URL }}
         GOREST_TOKEN: ${{ secrets.GOREST_TOKEN }}
-        
       run: npx playwright test
 
     - name: Upload Test Report
