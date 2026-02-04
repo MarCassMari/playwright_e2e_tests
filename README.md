@@ -30,7 +30,7 @@ Certifique-se de ter o [Node.js](https://nodejs.org/) instalado em sua máquina 
 Clone o repositório e instale as dependências:
 ```bash
 git clone https://github.com/MarCassMari/playwright_e2e_tests
-cd onlyfly
+cd playwright_e2e_tests
 npm install
 ```
 
