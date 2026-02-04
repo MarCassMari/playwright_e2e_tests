@@ -12,6 +12,12 @@
 | **Postman** | Documentação e testes manuais de API. | 🟠 | [Acessar Doc](https://learning.postman.com/) |
 | **Zod** | Validação de schemas e contratos de API. | 🛡️ | [Acessar Doc](https://zod.dev/) |
 
+### Ferramentas de Setup:
+* [ESLint](https://eslint.org/) - Análise estática do código.
+* [Prettier](https://prettier.io/) - Formatação automática de arquivos.
+* [Husky](https://typicode.github.io/husky/) - Git Hooks para automação de tarefas.
+* [lint-staged](https://github.com/lint-staged/lint-staged) - Verificação de arquivos modificados antes do commit.
+
 
 
 
@@ -75,5 +81,6 @@ Este projeto entrega um **framework de automação E2E robusto e escalável**, d
 * **Arquitetura Multicamadas**: Implementação rigorosa do padrão **Page Object Model (POM)**, garantindo a separação entre a lógica de teste e a interação com elementos da interface.
 * **Programação Orientada a Objetos (POO)**: Utilização de classes e métodos para encapsular comportamentos, facilitando a reutilização de código e a legibilidade dos cenários.
 * **Isolamento e Independência**: Testes desenhados para serem independentes, com setups e cleanups que garantem a confiabilidade da execução (evitando estados compartilhados).
-* **Qualidade Contínua (CI/CD)**: Pipeline totalmente integrada via GitHub Actions, validando o projeto em múltiplos motores de renderização (Chromium e Firefox) a cada nova alteração.
+* **Entrega Contínua (CI/CD)**: Pipeline totalmente integrada via GitHub Actions, validando o projeto em múltiplos motores de renderização (Chromium e Firefox) a cada nova alteração.
 * **Testes de API com Validação de Contrato**: Além da UI, o projeto integra validações de camada de serviço utilizando **Zod**, garantindo que a comunicação com o backend siga rigorosamente os schemas e status definidos.
+* **Qualidade de Código e Git Hooks**: Para garantir a consistência do código e evitar que erros simples subam para o repositório, este projeto utiliza **ESLint** e **Prettier**, que sçao ferramentas que analisam estaticamente e identifica os padrões de código problemáticos, e formatam para garantir que todos os arquivos sigam o mesmo estilo. O projeto, na etapa de pré-commit, também utiliza **Husky** na gerência dos Git Hooks garantindo que o código seja automaticamente formatado e verificado. Se houver algum erro de linting que não possa ser corrigido automaticamente, o commit será bloqueado, garantindo que apenas código limpo chegue ao GitHub a cada branch.

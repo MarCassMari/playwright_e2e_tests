@@ -7,6 +7,8 @@ export class CheckoutPage {
   readonly zipCodeInput: Locator;
   readonly continueBtn: Locator;
   readonly subtotalLabel: Locator;
+  readonly finishBtn: Locator;
+  readonly successHeader: Locator;
 
   constructor(page: Page) {
     this.page = page;
@@ -15,6 +17,8 @@ export class CheckoutPage {
     this.zipCodeInput = page.locator('[data-test="postalCode"]');
     this.continueBtn = page.locator('[data-test="continue"]');
     this.subtotalLabel = page.locator('[data-test="subtotal-label"]');
+    this.finishBtn = page.locator('[data-test="finish"]');
+    this.successHeader = page.locator('.complete-header');
   }
 
   async preencherDadosEContinuar(first: string, last: string, zip: string) {
@@ -22,5 +26,9 @@ export class CheckoutPage {
     await this.lastNameInput.fill(last);
     await this.zipCodeInput.fill(zip);
     await this.continueBtn.click();
+  }
+
+  async finalizarCompra() {
+    await this.finishBtn.click();
   }
 }
