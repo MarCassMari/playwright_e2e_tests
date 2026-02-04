@@ -10,6 +10,8 @@ test.describe('API GoRest - Comentários', () => {
 
   test('GET - Cenário de sucesso - Deve validar o status code da resposta', async ({ request }) => {
     const response = await request.get(`${baseUrl}/comments`, { headers });
+    console.log('Base URL carregada:', process.env.GOREST_BASE_URL ? 'Sim' : 'Não');
+    console.log('Token carregado:', process.env.GOREST_TOKEN ? 'Sim' : 'Não');
 
     expect(response.status()).toBe(200);
   });
