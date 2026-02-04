@@ -3,7 +3,7 @@ on:
   push:
     branches: [ main, master ]
   pull_request:
-    branches: [ main, master, feat/cenarios ]
+    branches: [ main, master]
 
 jobs:
   test:
@@ -26,10 +26,9 @@ jobs:
       run: npx playwright install --with-deps
 
     - name: Run Playwright tests
-    env:
-        GOREST_BASE_URL: ${{ secrets.GOREST_BASE_URL }}
+      env:
         GOREST_TOKEN: ${{ secrets.GOREST_TOKEN }}
-        
+        GOREST_BASE_URL: ${{ secrets.GOREST_BASE_URL }}
       run: npx playwright test
 
     - name: Upload Test Report
