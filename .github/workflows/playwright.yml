@@ -25,10 +25,10 @@ jobs:
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
 
-    -name: Secrets Keys Improve and Run tests
+    -name: Run playwright tests
       env:
-        GOREST_TOKEN: $ {{ secrets.GOREST_TOKEN }}
-        GOREST_BASE_URL: $ {{ secrets.GOREST_BASE_URL }}
+        GOREST_BASE_URL: ${{ secrets.GOREST_BASE_URL }}
+        GOREST_TOKEN: ${{ secrets.GOREST_TOKEN }}
       run: npx playwright test
    
     - name: Upload Test Report
