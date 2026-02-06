@@ -31,7 +31,6 @@ export default defineConfig({
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-    baseURL: process.env.GOREST_BASE_URL,
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
     extraHTTPHeaders: {
@@ -41,6 +40,16 @@ export default defineConfig({
 
   /* Configure projects for major browsers */
   projects: [
+    {
+      name: 'API-Tests',
+      testMatch: /.*\.api\.spec\.ts/, // Só arquivos de API
+      use: { baseURL: 'https://gorest.co.in' },
+    },
+    {
+      name: 'E2E-Tests',
+      testMatch: /.*\.e2e\.spec\.ts/, // Só arquivos de site
+      use: { baseURL: 'https://www.saucedemo.com' },
+    },
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
