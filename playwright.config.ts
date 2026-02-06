@@ -31,9 +31,12 @@ export default defineConfig({
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-    baseURL: process.env.GOREST_BASE_URL,
+    baseURL: 'https://www.saucedemo.com',
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
+    extraHTTPHeaders: {
+      Authorization: `Bearer ${process.env.GOREST_TOKEN}`,
+    },
   },
 
   /* Configure projects for major browsers */
